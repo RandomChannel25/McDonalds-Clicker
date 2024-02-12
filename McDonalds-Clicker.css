@@ -32,3 +32,8 @@
 #orange {
     color: orange;
 }
+#RESET {
+    background-color: red;
+    color: black;
+    font-weight: bold;
+}
