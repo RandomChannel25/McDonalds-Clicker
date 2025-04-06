@@ -1,5 +1,4 @@
 # 
-# Game Now Saves!!!
 # Don't Rename The Files
 # Download all the files (Zipping It Is Easiest)
 # Click Green Button That Says "<> Code" Then Download ZIP
