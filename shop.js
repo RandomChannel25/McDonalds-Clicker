@@ -1,5 +1,5 @@
 function RESET() {
-    // Clear all saved data in localStorage
+    // Die Save Dataa :)
     localStorage.removeItem('DaMoney');
     localStorage.removeItem('purchasedOne');
     localStorage.removeItem('purchasedTwo');
@@ -7,7 +7,7 @@ function RESET() {
     localStorage.removeItem('purchasedFour');
     localStorage.removeItem('purchasedFive');
 
-    // Reset all variables to initial state
+    // die variables :)
     DaMoney = 0;
     priceOne = 50;
     priceTwo = 500;
@@ -21,7 +21,7 @@ function RESET() {
     purchasedFour = false;
     purchasedFive = false;
 
-    // Update the UI to reflect the reset state
+    // make UI chang reseted
     Money.innerHTML = DaMoney;
 
     One.innerHTML = "???";
@@ -80,13 +80,14 @@ document.addEventListener('keyup', function(event) {
     }
 });
 
+//Off
 function itClick() {
     if (switchState === 0) {
     moneyClick()
 }
 }
 
-  // Function called when the switch is ON
+  // On
   function spaceClick() {
     if (switchState === 1) {
     moneyClick()
@@ -99,7 +100,7 @@ function itClick() {
 
 
 
-// Initialize variables
+// money and prices
 var DaMoney = parseInt(localStorage.getItem('DaMoney')) || 0;
 var priceOne = 50;
 var priceTwo = 500;
@@ -107,17 +108,17 @@ var priceThree = 1000;
 var priceFour = 1500;
 var priceFive = 2500;
 
-// Load saved progress (purchase status)
+// Load saved
 var purchasedOne = localStorage.getItem('purchasedOne') === 'true';
 var purchasedTwo = localStorage.getItem('purchasedTwo') === 'true';
 var purchasedThree = localStorage.getItem('purchasedThree') === 'true';
 var purchasedFour = localStorage.getItem('purchasedFour') === 'true';
 var purchasedFive = localStorage.getItem('purchasedFive') === 'true';
 
-// Update Money on page load
+// page load = money turn to saved money 🍟
 Money.innerHTML = DaMoney;
 
-// Load purchase status
+// Load purchase
 if (purchasedOne) {
     One.innerHTML = "9072041919";
     imgBuyOne.innerHTML = "PURCHASED!!!";
@@ -148,10 +149,10 @@ if (purchasedFive) {
     priceFive = 0;
 }
 
-// Function to update money and save it in localStorage
+// updates money and saves
 function updateMoney() {
     Money.innerHTML = DaMoney;
-    localStorage.setItem('DaMoney', DaMoney); // Save money in localStorage
+    localStorage.setItem('DaMoney', DaMoney); // Save money
 }
 
 function moneyClick() {
@@ -159,13 +160,13 @@ function moneyClick() {
     updateMoney();
 }
 
-// Function for purchase actions and saving them in localStorage
+// buyOne and up save purchases 🍟
 function buyOne() {
     if (DaMoney >= priceOne && !purchasedOne) {
         DaMoney -= priceOne;
         priceOne = 0;
         purchasedOne = true;
-        localStorage.setItem('purchasedOne', 'true'); // Save purchase status
+        localStorage.setItem('purchasedOne', 'true');
         buyOneClear();
         updateMoney();
     }
@@ -181,7 +182,7 @@ function buyTwo() {
         DaMoney -= priceTwo;
         priceTwo = 0;
         purchasedTwo = true;
-        localStorage.setItem('purchasedTwo', 'true'); // Save purchase status
+        localStorage.setItem('purchasedTwo', 'true');
         buyTwoClear();
         updateMoney();
     }
@@ -197,7 +198,7 @@ function buyThree() {
         DaMoney -= priceThree;
         priceThree = 0;
         purchasedThree = true;
-        localStorage.setItem('purchasedThree', 'true'); // Save purchase status
+        localStorage.setItem('purchasedThree', 'true');
         buyThreeClear();
         updateMoney();
     }
@@ -213,7 +214,7 @@ function buyFour() {
         DaMoney -= priceFour;
         priceFour = 0;
         purchasedFour = true;
-        localStorage.setItem('purchasedFour', 'true'); // Save purchase status
+        localStorage.setItem('purchasedFour', 'true');
         buyFourClear();
         updateMoney();
     }
@@ -229,7 +230,7 @@ function buyFive() {
         DaMoney -= priceFive;
         priceFive = 0;
         purchasedFive = true;
-        localStorage.setItem('purchasedFive', 'true'); // Save purchase status
+        localStorage.setItem('purchasedFive', 'true');
         buyFiveClear();
         updateMoney();
     }
