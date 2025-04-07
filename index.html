@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>McDonalds Clicker</title>
+    <link rel="icon" href="images/indexOnly/NORMAL.png" type="image/x-icon"/>
+    <link rel="stylesheet" href="McDonalds-Clicker.css">
+</head>
+<body id="Body1">
+    <div id="align">
+        <input id="SecretCodeInput" type="password" placeholder="Found A Secret Code?">
+        <button onclick="passcheck()">Submit</button>
+        <a href="https://youtube.com/@Most_Random_Channel">Channel Link</a>
+        <p id="version">v0.4.2</p>
+        <img src="images/indexOnly/Random.png" height="300px" width="300px" id="idk">
+        <a id="orange">||||||||||</a>
+        <a href="updates.html">Update Log</a>
+        <div class="switch-container">
+            <span class="left-text">Click</span>
+            <label class="switch">
+                <input type="checkbox" id="theSwitch">
+                <span class="slider"></span>
+            </label>
+            <span class="right-text">Spacebar  <p id=red>Click Off Of Switch Or Spacebar Might Toggle It On And Off</p></span>
+        </div>
+    </div>
+
+    <div id="UnlocksSection">
+        <p>Secret Code 1 (1 Rebirth Needed): <span id="rebirth1">???</span></p>
+        <p>Secret Code 2 (5 Rebirths Needed): <span id="rebirth2">???</span></p>
+        <p>Secret Code 3 (10 Rebirths Needed): <span id="rebirth3">???</span></p>
+        <p>Secret Code 4 (50 Rebirths Needed): <span id="rebirth4">???</span></p>
+        <p>Secret Code 5 (100 Rebirths Needed): <span id="rebirth5">???</span></p>
+        <p>Secret Code 6 (250 Rebirths Needed): <span id="rebirth6">???</span></p>
+        <p>Secret Code 7 (500 Rebirths Needed): <span id="rebirth7">???</span></p>
+        <p>Secret Code 8 (1,000 Rebirths Needed): <span id="rebirth8">???</span></p>
+        <p>Secret Code 9 (2,500 Rebirths Needed): <span id="rebirth9">???</span></p>
+        <p>Secret Code 10 (5,000 Rebirths Needed): <span id="rebirth10">???</span></p>
+        <p>Finish Game Code (10,000 Rebirths Needed): <span id="FINISH">???</span></p>
+    </div>
+
+    <h1>McDonalds Clicker</h1>
+    <img src="images/indexOnly/NORMAL.png" id="Logo" onclick="itClick()">
+    <p>Your Game Status: <span id="Status">Not Finished</span></p>
+    <p>Clicks: <span id="Counter">0</span></p>
+    <p>Multiplier: <span id="Multiplier">1</span></p>
+    <p>Rebirths: <span id="rCounter">0</span></p>
+    <button id="Rebirth" onclick="Rebirth()">Rebirth</button>
+    <p>You Need <span id="rebirthInfo">(???)</span> Clicks To Rebirth</p>
+    <br>
+    <iframe id="shop" src="shop.html"></iframe>
+    <br>
+    <button id="RESET" onclick="resetGame()">RESET GAME</button>
+
+    <script src="McDonalds-Clicker.js"></script>
+</body>
+</html>
